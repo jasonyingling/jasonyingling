@@ -1,0 +1,21 @@
+{
+	"wpVer": "3.8.1",
+	"url": "http://jasonyingling.dev",
+	"tablePrefix": "ying_",
+	"dbHost": "localhost",
+	"dbName": "testdb",
+	"dbUser": "root",
+	"dbPass": "root",
+	"git": true,
+	"submodule": true,
+	"wpDir": "cms",
+	"contentDir": "content",
+	"installTheme": true,
+	"themeDir": "yingles",
+	"themeType": "git",
+	"themeUser": "ollo",
+	"themeRepo": "boiler",
+	"themeBranch": "master",
+	"customDirs": true,
+	"saltKeys": "define('AUTH_KEY',         'L=S*MU(-iXI&V*ieyf/o:3+=4w=D5_eq?sdyfk|Pg}p{Ib@YDo2uV1<knBjhyCs3');\ndefine('SECURE_AUTH_KEY',  ']STojx_A$d+|T!T3!|;!G=b_*4O2Zh^$Nu-:;q@Ir.7a*RX)DTRd$*IS3w<~oWh0');\ndefine('LOGGED_IN_KEY',    'Z-JVC/?`S-[yvR^/#7A[kiFEz+[^Q` *G|)ji>0>aNLq-5M}d27sG4nJ^P$e~sa3');\ndefine('NONCE_KEY',        '^eX^.[0D5b<ab5xx FK#*}V6MG.IBwjX+h3,dPgv<Z=-_i3H;X~2WE |gWz#GTQ=');\ndefine('AUTH_SALT',        'f}y# V+dql_H`E-.(b4HucNEq(hFhKNmAzD/X=M2U|-M:Urn*Ljm{9m=:.3;s=YO');\ndefine('SECURE_AUTH_SALT', 'eS!i5^Gmm-r7t1ZRK#|flM!FW9BE8PKbu4&O_$&-}=*O=#Ky5,8e.zY]6*mLhNS:');\ndefine('LOGGED_IN_SALT',   '|`s{hB*]pRrfo$PJ]C%i=|X QprIu:-8-@Wjq9;;Pp&|jA=!sFJ[H|4_ybdGU[st');\ndefine('NONCE_SALT',       'mbJ@.X%ds}aAMb~&v3$y+n$-tvLNEm^jdU7W=p^ReWz9s5_(iJttQMC0++WY)%bL');\n"
+}
