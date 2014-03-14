@@ -7,6 +7,13 @@
 html {
 	overflow-x: hidden;
 	font-size: 62.5%;
+	background: $white;
+	
+	#wpadminbar {
+		@include media($mobile) {
+			margin-top: -46px;
+		}
+	}
 }
 
 body {
@@ -17,12 +24,16 @@ body {
 
 a {
 	text-decoration: none;
-	@include transition(color 2s ease-in);
-	color: $orange;
+	@include transition(color .5s ease-in);
+	color: $charcoal;
 
 	&:hover {
-		color: darken($orange, 5%);
+		color: $red;
 	}
+}
+
+p {
+	margin: em(10, 16) 0;
 }
 
 ::selection {

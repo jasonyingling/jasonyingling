@@ -5,4 +5,12 @@ jQuery(document).ready(function($){
 	if(localDev == true) {
 		loadReload();
 	}
+	
+	$('body').flowtype({
+		minimum   : 500,
+		maximum   : 1200,
+		minFont   : 14,
+		maxFont   : 28,
+		fontRatio : 50
+	});
 });

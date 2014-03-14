@@ -133,7 +133,9 @@ function boiler_scripts_styles() {
 
 	wp_enqueue_script( 'jquery' , array(), '', true );
 
-	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', '2.6.2', true );
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/flowtype.js', '2.6.2', true );
+	
+	wp_enqueue_script( 'flowtype', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', '1.1', true );
 
 	wp_enqueue_script( 'boiler-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20120206', true );
 

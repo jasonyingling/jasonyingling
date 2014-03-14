@@ -1,24 +1,43 @@
 #globalHeader {
-	padding: 1rem 0 0;
-	border-bottom: 2px solid $charcoal;
+	border-top: 10px solid $red;
+	@include clearfix;
+	
+	.top_navigation {
+		height: 90px;
+	}
+	
+	.logo {
+		@include span-columns(5);
+		text-transform: lowercase;
+		
+		h1 {
+			line-height: 90px;
+			margin: 0;
+		}
+	}
 
 	#headerNavigation {
-		@include outer-container;
+		@include span-columns(7);
 		margin-top: 2rem;
 
 		ul {
 			list-style: none;
+			float: right;
 
 			li {
-				background: $charcoal;
 				float: left;
 
 				a {
 					display: inline-block;
-					color: $white;
 					padding: 1rem;
+					text-transform: lowercase;
 				}
 			}
 		}
+	}
+	
+	.social_bar {
+		height: 50px;
+		background: $gray;
 	}
 }

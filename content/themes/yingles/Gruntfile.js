@@ -83,7 +83,6 @@ module.exports = function (grunt) {
           files: [
             'css/*.css',
           ],
-
           options: {
             livereload: true, // reload the css not the sass changes
           },
@@ -117,4 +116,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-php');
 
   grunt.registerTask('default', ['watch', 'php', 'sass']);
+  
+  grunt.loadNpmTasks('grunt-notify');
+  grunt.task.run('notify_hooks');
 };

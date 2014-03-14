@@ -13,6 +13,8 @@
 
 get_header(); ?>
 
+	<section class="slideshow"></section>
+
 	<section class="content">
 		<?php if ( have_posts() ) : ?>
 
@@ -23,19 +25,27 @@ get_header(); ?>
 					 * If you want to overload this in a child theme then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					get_template_part( 'content', get_post_format() );
+					//get_template_part( 'content', get_post_format() );
 				?>
 
 			<?php endwhile; ?>
 
-			<?php boiler_content_nav( 'nav-below' ); ?>
+			<?php //boiler_content_nav( 'nav-below' ); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'no-results', 'index' ); ?>
+			<?php //get_template_part( 'no-results', 'index' ); ?>
 
 		<?php endif; ?>
 	</section>
+	
+	<section class="callout">
+		<ul class="callout_links">
+			<li><button>develop.</button></li>
+			<li><button>design.</button></li>
+			<li><button>watch.</button></li>
+		</ul>
+	</section>
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

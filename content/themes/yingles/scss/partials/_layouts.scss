@@ -1,12 +1,19 @@
 
 // general wrapper class
-.container {
+%post {
 	@include outer-container;
+	@include clearfix;
+}
 
+.container {
+	@extend %post;
+	padding: 0 2rem;
+	
 	.content {
-		@include span-columns(8);
-		padding: 2rem 0;
+		@include span-columns(12);
+		padding: 0 2rem;
 	}
+
 	.sidebar {
 		@include span-columns(4);
 		@include omega;
