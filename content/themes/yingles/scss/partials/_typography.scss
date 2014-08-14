@@ -5,68 +5,22 @@ h1, h2, h3, h4 {
 }
 
 body {
-   font-size: 16px;
+	@include monsterrat;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
 }
 
 h1,h2,h3,h4,h5,h6,p {
-   line-height: 1.45;
+	line-height: 1.45;
 }
 
-h1 { font-size: 1.5em; }
-h2 { font-size: 1.25em; }
-
-// Settings
-
-$maximum: 1000;
-$minimum: 360;
-$maxFont: 28;
-$minFont: 14;
-$fontRatio: 50;
-$lineRatio: 1.45;
-
-/**
- * Mixin start
- **/
-
-@mixin flowtype($maximum, $minimum, $maxFont, $minFont, $fontRatio, $lineRatio) {
-  $fontSize: $maxFont;
-  $lineHeight: $lineRatio;
-
-  $tempFontSize: $fontSize;
-  $tempLineHeight: $lineHeight;
-  
-  @media screen and (max-width: #{$minimum}px) {
-    $lineHeight: floor($minFont * $lineRatio);
-    
-    font-size: #{$minFont}px; 
-    line-height: #{$lineHeight}px; 
-  }
-
-  @for $i from $minimum through $maximum {
-    $fontBase: floor($i / $fontRatio);
-      
-    @if $fontBase > $maxFont {
-      $fontSize: $maxFont;  
-    }
-    @else if $fontBase < $minFont {
-      $fontSize: $minFont;
-    }
-    @else {
-      $fontSize: $fontBase;
-    }
-
-    $lineHeight: floor($fontSize * $lineRatio);
-    
-    @if $tempLineHeight != $lineHeight or $tempFontSize != $fontSize {
-      @media screen and (min-width: #{$i}px) {
-        font-size: #{$fontSize}px; 
-        line-height: #{$lineHeight}px;
-      }
-    }
-    
-    $tempLineHeight: $lineHeight;
-    $tempFontSize: $fontSize;
-  }
+h1 { 
+	font-size: 1.5em; 
+}
+h2 {
+	@include monsterrat;
+	font-size: 1.25em;
+	font-weight: 400;
 }
 
 // Use mixin

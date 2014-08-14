@@ -36,6 +36,11 @@ p {
 	margin: em(10, 16) 0;
 }
 
+img {
+	max-width: 100%;
+	display: block;
+}
+
 ::selection {
 	background: lighten($orange, 5%);
 	opacity: 0.8;

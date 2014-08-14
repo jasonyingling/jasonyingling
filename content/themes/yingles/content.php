@@ -4,15 +4,42 @@
  */
 ?>
 
-<article>
+<article class="post_content">
 	<header>
-		<h1><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php boiler_posted_on(); ?>
+	
+		<div class="featured_image">
+			<img src="<?php bloginfo('template_url'); ?>/images/waino-header.jpg" alt=""/>
+		</div><!-- featured_image -->
+		
+		<div class="container">
+				<div class="post_heading">
+					<h2><a href="#"><?php the_title(); ?></a></h2>
+					<div class="byline">
+						<a href="#">by Jason Yingling<i class="fa fa-plus"></i></a>
+					</div><!-- end featured by_line -->
+				</div>
+			
+			<div class="reading_time post_meta_overlays">
+				<p><a href="#"><i class="fa fa-clock-o"></i>10 min</a></p>
 			</div>
-		<?php endif; ?>
+			
+			<div class="post_date post_meta_overlays">
+				<a href="#">
+					<p>01/12/2014</p>
+					<p>3:52 PM</p>
+				</a>
+			</div>
+			
+			<div class="taxonomies post_meta_overlays">
+				<ul class="category">
+					<li><a href="#">#design</a></li>
+				</ul>
+			</div>
+			
+			<div class="comments post_meta_overlays">
+				<p><a href="#"><i class="fa fa-comments-o"></i>4 comments</a></p>
+			</div>
+		</div>
 	</header>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>

@@ -7,16 +7,15 @@
 
 .container {
 	@extend %post;
+	max-width: 1280px;
 	padding: 0 2rem;
 	
 	.content {
-		@include span-columns(12);
+		@include span-columns(8);
 		padding: 0 2rem;
 	}
-
+	
 	.sidebar {
 		@include span-columns(4);
-		@include omega;
-		padding: 2rem 0;
 	}
 }

@@ -1,0 +1,20 @@
+.popular_post_area {
+	.popular_post {
+		@include span-columns(4);
+		padding: 20px 0;
+		text-align: center;
+		
+		h2 {
+			font-size: em(28,24);
+		}
+		
+		a {
+			color: $black;
+		}
+		
+		.category {
+			list-style-type: none;
+			font-size: em(14,24);
+		}
+	}
+}
