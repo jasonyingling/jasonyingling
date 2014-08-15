@@ -1,0 +1,43 @@
+.about_author {
+	@include roboto;
+	font-weight: 400;
+	font-size: em(16,24);
+	background: $red;
+	color: $white;
+	padding: 20px;
+	text-align: center;
+
+	.author_pic {
+		display: inline-block;
+	}
+	
+	h3 {
+		color: $white;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	a {
+		color: $white;
+		
+		&:hover {
+			color: $white;
+		}
+	}
+	
+	.author_bio {
+		display: none;
+	}
+	
+	.expand_bio {
+		position: absolute;
+		right: 15px;
+		bottom: 10px;
+		background: none;
+		color: $white;
+		font-size: em(14,18);
+		border: 0;
+		outline: none;
+	}
+}

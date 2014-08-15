@@ -19,6 +19,7 @@
 	text-align:center;
 	
 	h2 {
+		@include transition(color .5s ease-in);
 		font-size: 3em;
 		color: $white;
 		line-height: 1.25;

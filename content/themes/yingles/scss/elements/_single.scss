@@ -1,0 +1,61 @@
+.single_post_content {
+	@include robotoSlab;
+	font-size: 18px;
+	color: $black;
+	padding: 0 0 35px;
+	margin: -25px 0 0;
+}
+
+.lead_copy {
+	
+	&.post_copy {
+		padding: 35px 0 20px;
+	}
+	
+	p:first-child:first-letter {
+		font-size: em(68,24);
+		float: left;
+		line-height: 1;
+		padding-right: 5px;
+	}
+}
+
+.post_copy {
+	border-left: 3px solid $red;
+	padding: 20px 0;
+}
+
+.fixed_image_area {
+	background-image: url('../images/busch.jpg');
+	background-attachment: fixed;
+	
+	.background_image {
+		padding: 60px 0;
+		background: rgba(0,0,0,.5);
+	}
+	
+	.fixed_quote {
+		@include span-columns(8);
+		@include shift(2);
+		@include montserrat;
+		font-size: em(28, 24);
+		line-height: 1.25;
+		color: $white;
+		background: $red;
+		padding: 50px 5%;
+		text-align: center;
+		
+		h3 {
+			margin: 0;
+			&:before {
+				content: '"';
+			}
+			&:after {
+				content: '"';
+			}
+		}
+		p {
+			margin: 0;
+		}
+	}
+}

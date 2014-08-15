@@ -1,5 +1,43 @@
 #globalFooter {
 	@include span-columns(12);
-	margin-top: 2rem;
-	border-top: 2px solid lighten($charcoal, 50%);
+	background: $red;
+	padding: 20px 0;
+	
+	.logo_area {
+		@include span-columns(4);
+		float: left;
+	}
+	.logo {
+		margin: 0;
+		text-transform: lowercase;
+		color: $darkRed;
+		float: left;
+		
+		a {
+			color: $darkRed;
+		}
+	}
+	
+	.footer_nav {
+		@include montserrat;
+		@include span-columns(8);
+		font-size: em(24,24);
+		text-transform: lowercase;
+		margin-top: 4px;
+		
+		ul {
+			text-align: right;
+			list-style-type: none;
+			
+			li {
+				display: inline-block;
+				margin-right: 5%;
+				
+				a {
+					padding-top: 3px;
+					color: $darkRed;
+				}
+			}
+		}
+	}
 }

@@ -1,12 +1,14 @@
 // mixins
-@mixin monsterrat {
+@mixin montserrat {
 	font-family: 'Montserrat', 'Roboto', sans-serif;
+	// Normal: 400
 }
 
 @mixin roboto {
 	font-family: 'Roboto', 'Montserrat', sans-serif;
-	// Normal: 300
-	// Italic: 700
+	// Italic: 300
+	// Normal: 400
+	// Bold: 700
 }
 
 @mixin robotoSlab {

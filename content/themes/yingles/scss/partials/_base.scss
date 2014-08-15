@@ -6,7 +6,6 @@
 
 html {
 	overflow-x: hidden;
-	font-size: 62.5%;
 	background: $white;
 	
 	#wpadminbar {
@@ -17,7 +16,6 @@ html {
 }
 
 body {
-	font-size: 1.6rem;
 	line-height: 2.4rem;
 	color: $charcoal;
 }
@@ -42,14 +40,14 @@ img {
 }
 
 ::selection {
-	background: lighten($orange, 5%);
+	background: lighten($red, 5%);
 	opacity: 0.8;
 	color: $white;
 	text-shadow: 0 0 1px $charcoal;
 }
 
 ::moz-selection {
-	background: lighten($orange, 5%);
+	background: lighten($red, 5%);
 	opacity: 0.8;
 	color: $white;
 	text-shadow: 0 0 1px $charcoal;

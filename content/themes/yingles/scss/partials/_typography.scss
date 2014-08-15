@@ -5,7 +5,8 @@ h1, h2, h3, h4 {
 }
 
 body {
-	@include monsterrat;
+	@include montserrat;
+	font-weight: 400;
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 }
@@ -18,7 +19,8 @@ h1 {
 	font-size: 1.5em; 
 }
 h2 {
-	@include monsterrat;
+	@include montserrat;
+	font-weight: 400;
 	font-size: 1.25em;
 	font-weight: 400;
 }
