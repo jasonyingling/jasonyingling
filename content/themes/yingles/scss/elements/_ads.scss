@@ -1,0 +1,27 @@
+.google-ads-right {
+	display: inline-block;
+	float: right;
+	margin-left: 20px;
+	z-index: 1;
+}
+
+.google-ads-left {
+	display: inline-block;
+	float: left;
+	margin-right: 20px;
+	z-index: 1;
+}
+
+.google-ads-center {
+	display: block;
+	z-index: 1;
+	text-align: center;
+	margin: 40px 0 30px;
+}
+
+.google-ads-sidebar {
+	display: block;
+	z-index: 1;
+	text-align: center;
+	margin: 0px 0 30px;
+}

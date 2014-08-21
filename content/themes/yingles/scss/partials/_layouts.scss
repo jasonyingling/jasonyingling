@@ -1,5 +1,6 @@
 
 // general wrapper class
+
 %post {
 	@include outer-container;
 	@include clearfix;
@@ -8,7 +9,7 @@
 .container {
 	@extend %post;
 	max-width: 1280px;
-	padding: 0 2rem;
+	padding: 0 30px;
 	
 	.content {
 		@include span-columns(8);

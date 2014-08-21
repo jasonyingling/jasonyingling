@@ -11,17 +11,15 @@
 		</div><!-- featured_image -->
 		
 		<div class="container">
-			<a href="#">
-				<article class="featured_post">
-					<h2><?php the_title(); ?></h2>
-					<div class="featured_preview">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
-					</div><!-- featured_preview -->
-					<div class="byline">
-						by Jason Yingling
-					</div><!-- end featured by_line -->
-				</article><!-- featured_post -->
-			</a>
+			<article class="featured_post">
+				<h2><a href="#"><?php the_title(); ?></a></h2>
+				<div class="featured_preview">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+				</div><!-- featured_preview -->
+				<div class="byline">
+					by Jason Yingling
+				</div><!-- end featured by_line -->
+			</article><!-- featured_post -->
 			
 			<div class="reading_time post_meta_overlays">
 				<p><a href="#"><i class="fa fa-clock-o"></i>10 min</a></p>

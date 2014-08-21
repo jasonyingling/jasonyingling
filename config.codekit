@@ -12034,6 +12034,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/content\/themes\/yingles\/images\/chong-louie.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 221681,
+		"inputAbbreviatedPath": "\/content\/themes\/yingles\/images\/chong-louie.jpg",
+		"outputAbbreviatedPath": "\/content\/themes\/yingles\/images\/chong-louie.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/content\/themes\/yingles\/images\/me.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -12079,6 +12090,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/content\/themes\/yingles\/inc\/jetpack.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/content\/themes\/yingles\/inc\/shortcodes.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/content\/themes\/yingles\/inc\/shortcodes.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -21283,6 +21303,22 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/content\/themes\/yingles\/scss\/elements\/_ads.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/content\/themes\/yingles\/scss\/elements\/_ads.scss",
+		"outputAbbreviatedPath": "\/content\/themes\/yingles\/scss\/css\/_ads.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/content\/themes\/yingles\/scss\/elements\/_featured.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -23365,6 +23401,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/content\/themes\/yingles\/sidebar-single.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/content\/themes\/yingles\/sidebar-single.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/content\/themes\/yingles\/sidebar.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -23391,6 +23436,94 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/content\/uploads\/2014\/03\/busch-1024x694.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 191388,
+		"inputAbbreviatedPath": "\/content\/uploads\/2014\/03\/busch-1024x694.jpg",
+		"outputAbbreviatedPath": "\/content\/uploads\/2014\/03\/busch-1024x694.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/content\/uploads\/2014\/03\/busch-150x150.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8665,
+		"inputAbbreviatedPath": "\/content\/uploads\/2014\/03\/busch-150x150.jpg",
+		"outputAbbreviatedPath": "\/content\/uploads\/2014\/03\/busch-150x150.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/content\/uploads\/2014\/03\/busch-300x203.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22212,
+		"inputAbbreviatedPath": "\/content\/uploads\/2014\/03\/busch-300x203.jpg",
+		"outputAbbreviatedPath": "\/content\/uploads\/2014\/03\/busch-300x203.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/content\/uploads\/2014\/03\/busch.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 361106,
+		"inputAbbreviatedPath": "\/content\/uploads\/2014\/03\/busch.jpg",
+		"outputAbbreviatedPath": "\/content\/uploads\/2014\/03\/busch.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/content\/uploads\/2014\/03\/chong-louie-150x150.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6858,
+		"inputAbbreviatedPath": "\/content\/uploads\/2014\/03\/chong-louie-150x150.jpg",
+		"outputAbbreviatedPath": "\/content\/uploads\/2014\/03\/chong-louie-150x150.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/content\/uploads\/2014\/03\/chong-louie-202x300.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 15560,
+		"inputAbbreviatedPath": "\/content\/uploads\/2014\/03\/chong-louie-202x300.jpg",
+		"outputAbbreviatedPath": "\/content\/uploads\/2014\/03\/chong-louie-202x300.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/content\/uploads\/2014\/03\/chong-louie.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 221681,
+		"inputAbbreviatedPath": "\/content\/uploads\/2014\/03\/chong-louie.jpg",
+		"outputAbbreviatedPath": "\/content\/uploads\/2014\/03\/chong-louie.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/content\/uploads\/2014\/03\/me.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 31929,
+		"inputAbbreviatedPath": "\/content\/uploads\/2014\/03\/me.png",
+		"outputAbbreviatedPath": "\/content\/uploads\/2014\/03\/me.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/index.php": {
 		"fileType": 8192,

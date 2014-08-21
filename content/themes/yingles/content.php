@@ -13,7 +13,7 @@
 		
 		<div class="container">
 				<div class="post_heading">
-					<h2><a href="#"><?php the_title(); ?></a></h2>
+					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					<div class="byline">
 						<a href="#">by Jason Yingling</a>
 					</div><!-- end featured by_line -->

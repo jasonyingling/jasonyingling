@@ -165,3 +165,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Shortcodes
+ */
+require get_template_directory() . '/inc/shortcodes.php';

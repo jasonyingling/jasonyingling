@@ -14,16 +14,28 @@
 }
 
 .featured_post {
-	padding: 90px 6%;
+	padding: 90px 10%;
 	color: $white;
 	text-align:center;
 	
 	h2 {
 		@include transition(color .5s ease-in);
-		font-size: 3em;
+		font-size: 2em;
 		color: $white;
 		line-height: 1.25;
 		margin: 0;
+		
+		&:hover {
+			color: $red;
+		}
+	}
+	
+	p {
+		font-size: em(18, 24);
+	}
+	
+	a {
+		color: $white;
 		
 		&:hover {
 			color: $red;
