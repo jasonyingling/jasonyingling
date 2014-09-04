@@ -3,6 +3,12 @@
 	float: right;
 	margin-left: 20px;
 	z-index: 1;
+	
+	@include media($mobile) {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .google-ads-left {
@@ -10,6 +16,12 @@
 	float: left;
 	margin-right: 20px;
 	z-index: 1;
+	
+	@include media($mobile) {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .google-ads-center {
@@ -17,6 +29,12 @@
 	z-index: 1;
 	text-align: center;
 	margin: 40px 0 30px;
+	
+	@include media($mobile) {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .google-ads-sidebar {

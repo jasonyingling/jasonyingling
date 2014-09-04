@@ -1,0 +1,6 @@
+
+[Crayon Syntax Highlighter Log Entry - 1:48:23 AM - 04 Sep 2014]
+
+ [SYSTEM LOG] 'Upload directory is empty:  cannot load languages.'
+ [SYSTEM LOG] 'The resource directory is missing, should be at \'\'.'
+ [CrayonUtil::lines()] 'Cannot read lines at \'default/default.txt\'.'

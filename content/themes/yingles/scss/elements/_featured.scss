@@ -9,6 +9,23 @@
 		
 		&.comments {
 			bottom: 35px;
+			
+			a {
+				&:before {
+					font-family: FontAwesome;
+					content: '\f0e6';
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+.category_overlay {
+	a {
+		text-transform: lowercase;
+		&:before {
+			content: '#';
 		}
 	}
 }
@@ -18,12 +35,24 @@
 	color: $white;
 	text-align:center;
 	
+	@include media($tablet) {
+		padding: 50px 7%;
+	}
+	
+	@include media($mobile) {
+		padding: 40px 10% 50px;
+	}
+	
 	h2 {
 		@include transition(color .5s ease-in);
 		font-size: 2em;
 		color: $white;
 		line-height: 1.25;
 		margin: 0;
+		
+		@include media($mobile) {
+			font-size: 1.5em;
+		}
 		
 		&:hover {
 			color: $red;
@@ -32,6 +61,10 @@
 	
 	p {
 		font-size: em(18, 24);
+		
+		@include media($mobile) {
+			display: none;
+		}
 	}
 	
 	a {

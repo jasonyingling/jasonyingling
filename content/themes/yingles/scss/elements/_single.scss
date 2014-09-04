@@ -12,6 +12,11 @@
 		max-width: 60%;
 		height: auto;
 		z-index: 1;
+		
+		@include media($mobile) {
+			margin-left: 0;
+			max-width: 30%;
+		}
 	}
 	
 	.alignright {
@@ -21,6 +26,11 @@
 		max-width: 60%;
 		height: auto;
 		z-index: 1;
+		
+		@include media($mobile) {
+			margin-right: 0;
+			max-width: 30%;
+		}
 	}
 	
 	.aligncenter {
@@ -34,12 +44,30 @@
 		
 		.comments {
 			@include span-columns(8);
+			
+			@include media($tablet) {
+				@include span-columns(8);
+			}
+		}
+		
+		#disqus_thread {
+			clear: both;
 		}
 		
 		.sidebar_single {
 			@include span-columns(4);
 			@include omega();
 			float: right;
+			
+			@include media($tablet) {
+				@include span-columns(8);
+			}
+			
+			@include media($mobile) {
+				@include span-columns(4);
+				float: none;
+			}
+			
 		}
 		.about_author {
 		@include roboto;
@@ -48,6 +76,10 @@
 		
 		.author_pic {
 			@include span-columns(3);
+			
+			@include media($mobile) {
+				@include span-columns(4);
+			}
 			
 			img {
 				margin: 0 auto 10px;
@@ -58,6 +90,10 @@
 			@include omega();
 			font-size: 16px;
 			text-align: left;
+			
+			@include media($mobile) {
+				@include span-columns(4);
+			}
 			
 			p {
 				&:first-child {
@@ -94,17 +130,29 @@
 			margin: 0.625em 10%;
 			padding: 0 0 0 20px;
 			border-left: 3px solid $red;
+			
+			@include media($mobile) {
+				margin: 0.625em 0;
+			}
 		}
 	}
 	
 	p {
 		padding: 0 10%;
+		
+		@include media($mobile) {
+			padding: 0;
+		}
 	}
 	
 	ul {
 		padding: 0 10%;
 		margin: 0.625em 0;
 		list-style-position: inside;
+		
+		@include media($mobile) {
+			padding: 0;
+		}
 		
 		ul {
 			padding: 0 0 0 20px;
@@ -153,6 +201,11 @@
 		padding: 50px 5%;
 		text-align: center;
 		
+		@include media($mobile) {
+			@include span-columns(4);
+			@include shift(0);
+		}
+		
 		h3 {
 			margin: 0;
 			&:before {
@@ -183,7 +236,7 @@
 }
 
 .fixed_image_area {
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	position: absolute;
 	height: 100%;
@@ -235,21 +288,51 @@
 		overflow: hidden;
 		margin-bottom: 20px;
 		
+		@include media($tablet12) {
+			@include span-columns(4);
+			@include omega(3n);
+		}
+		
+		@include media($mobile) {
+			@include span-columns(4);
+		}
+		
 		.featured_image {
 			top: 0;
+			
+			img {
+				@include media($tablet) {
+					max-width: 160%;
+					margin-left: -30%;
+				}
+				
+				@include media($mobile) {
+					max-width: 100%;
+					margin: 0;
+				}
+			}
 		}
 		
 		h3 {
 			padding: 0 5%;
 			text-align: center;
 			margin: 0;
-			line-height: 1.25;
+			line-height: 1.2;
+			font-size: em(24,24);
+			
+			@include media($tablet) {
+				font-size: em(24,24);
+			}
 		}
 		
 		a {
 			color: $white;
-			padding: 30px 0;
+			padding: 20px 0;
 			display: block;
+			
+			@include media($tablet) {
+				padding: 15px 0;
+			}
 		}
 	}	
 }

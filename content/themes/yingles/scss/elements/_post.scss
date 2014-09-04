@@ -1,6 +1,10 @@
 .post_content {
 	@include span-columns(8);
 	
+	@include media($mobile) {
+		@include span-columns(4);
+	}
+	
 	article {
 		margin-bottom: 30px;
 	}
@@ -26,6 +30,10 @@
 	
 	.post_heading {
 		padding: 60px 5%;
+		
+		@include media($tablet) {
+			padding: 40px 5%;
+		}
 	}
 }
 
@@ -74,6 +82,10 @@
 	font-style: italic;
 	font-size: em(18,24);
 	text-align: center;
+	
+	@include media($tablet) {
+		line-height: 1.25;
+	}
 	
 	.fa {
 		margin-left: 10px;
@@ -157,4 +169,49 @@
 		right: 20px;
 	}
 
+}
+
+/* iframe video adjustment */
+.video_wrapper {
+	padding: 0 20%;
+	margin: 30px 0;
+	
+	@include media($break960) {
+		padding: 0 10%;
+	}
+	
+	@include media($mobile) {
+		padding: 0;
+	}
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.crayon-syntax {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.nav-previous {
+	float: left;
+}
+
+.nav-next {
+	float: right;
 }

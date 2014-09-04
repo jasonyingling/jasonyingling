@@ -3,7 +3,9 @@
  * @package boiler
  */
 ?>
-
+	<?php
+		$author = get_the_author();
+	?>
 	<section class="featured_post_area">
 		
 		<div class="featured_image">
@@ -12,13 +14,15 @@
 		
 		<div class="container">
 			<article class="featured_post">
-				<h2><a href="#"><?php the_title(); ?></a></h2>
+				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<div class="featured_preview">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla.</p>
+					<?php the_field('short_description'); ?>
 				</div><!-- featured_preview -->
-				<div class="byline">
-					by Jason Yingling
-				</div><!-- end featured by_line -->
+				<?php if ($author) : ?>
+					<div class="byline">
+						by <?php the_author_posts_link(); ?>
+					</div><!-- end featured by_line -->
+				<?php endif; ?>
 			</article><!-- featured_post -->
 			
 			<div class="reading_time post_meta_overlays">
@@ -26,20 +30,18 @@
 			</div>
 			
 			<div class="post_date post_meta_overlays">
-				<a href="#">
-					<p>01/12/2014</p>
-					<p>3:52 PM</p>
-				</a>
+				<p><?php the_time('F j, Y'); ?></p>
+				<p><?php the_time('g:i A'); ?></p>
 			</div>
 			
 			<div class="taxonomies post_meta_overlays">
-				<ul class="category">
-					<li><a href="#">#design</a></li>
+				<ul class="category category_overlay">
+					<li><?php the_category(' '); ?></li>
 				</ul>
 			</div>
 			
 			<div class="comments post_meta_overlays">
-				<p><a href="#"><i class="fa fa-comments-o"></i>4 comments</a></p>
+				<p><a href="<?php comments_link(); ?>"><i class="fa fa-comments-o"></i><?php comments_number('comment', '1 comment', '% comments'); ?></a></p>
 			</div>
 			
 		</div><!-- end container -->

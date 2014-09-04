@@ -19,5 +19,10 @@
 	.sidebar {
 		@include span-columns(4);
 		@include omega();
+		margin-bottom: 40px;
+		
+		@include media($mobile) {
+			@include span-columns(4);
+		}
 	}
 }

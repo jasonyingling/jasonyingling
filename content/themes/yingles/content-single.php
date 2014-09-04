@@ -33,11 +33,17 @@
 		
 			<?php the_content(); ?>
 			
-			<ul class="sources">
-				<li>Sources:</li>
-				<li><a href="#">http://google.com</a></li>
-				<li><a href="#">http://google.com</a></li>
-			</ul>
+			<?php if( have_rows('sources') ): ?>
+				<ul class="sources">
+					<li>Sources:</li>
+					<?php while ( have_rows('sources') ) : the_row(); ?>
+				
+				    	<li><a href="<?php the_sub_field('source_link'); ?>" target="_blank"><?php the_sub_field('source_title'); ?></a></li>
+				
+					<?php endwhile; ?>
+				</ul>
+			<?php endif; ?>
+			
 		</div>
 	</div>
 	
@@ -47,37 +53,13 @@
 			
 			<div class="comments">
 			
-				<div class="about_author">
-					 <div class="author_pic">
-					 	<img src="<?php bloginfo('template_url'); ?>/images/me.png" alt="" />
-					 	<h3>Jason Yingling</h3>
-					 	<a href="#">@jason_yingling</a>	
-					 </div><!-- end author_pic -->
-					 
-					 <div class="author_bio">
-						 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-						 <div class="more_by">
-							 <h4>More stories by Jason</h4>
-							 <ul class="more_stories">
-							 	<li><a href="#">Parturient Quam Mollis Sollicitudin Ornare</a></li>
-							 	<li><a href="#">Parturient Quam Mollis Sollicitudin Ornare</a></li>
-							 	<li><a href="#">Parturient Quam Mollis Sollicitudin Ornare</a></li>
-							 </ul>
-						 </div><!-- end more_by -->
-					 </div><!-- end author_bio -->
-					 <!-- <button class="expand_bio"><i class="fa fa-plus"></i></button> --><!-- expand_bio -->
-				</div><!-- end about_author -->
+				<?php get_template_part('content', 'footer-author'); ?>
 				
-				<?php edit_post_link( __( 'Edit', 'boiler' ), '<span class="edit-link">', '</span>' ); ?>
-				
-				<?php boiler_content_nav( 'nav-below' ); ?>
-		
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() )
-						comments_template();
-				?>
+				<?php get_template_part('content', 'comments'); ?>
+			
 			</div>
+	
 		</div>
 	</footer>
+	
 </article>

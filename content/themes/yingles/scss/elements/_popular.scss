@@ -1,7 +1,7 @@
 .popular_post_area {
 	.popular_post {
 		@include span-columns(4);
-		padding: 20px 0;
+		padding: 20px 0 0;
 		text-align: center;
 		
 		h2 {

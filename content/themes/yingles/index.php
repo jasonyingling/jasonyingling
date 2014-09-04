@@ -12,38 +12,33 @@
  */
 
 get_header(); ?>
-
-	<?php get_template_part('content', 'featured'); ?>
+	<?php 
+		$displayed = array(); 
+		//$sevenDaysAgo = new DateTime('200 days ago');
+		//$postAfter = $sevenDaysAgo->format('F j, Y');
+	?>
+	<?php
+		$args = array (
+		  'posts_per_page' => 1
+		);
+		
+		$featured = new WP_Query($args);
+		if ($featured->have_posts() ) : 
+	?>
+		<?php while( $featured->have_posts() ) : $featured->the_post(); ?>
+			<?php get_template_part('content', 'featured'); ?>
+			<?php $displayed[] = get_the_ID(); ?>
+		<?php endwhile; ?>
 	
-	<section class="popular_post_area">
-		<div class="container">
-			<article class="popular_post">
-				<h2><a href="#">Vestibulum id ligula porta felis euismod semper</a></h2>
-				<ul class="category">
-					<li><a href="#">#design</a></li>
-				</ul>
-			</article><!-- end popular_posts -->
-			
-			<article class="popular_post">
-				<h2><a href="#">Vestibulum id ligula porta felis euismod semper</a></h2>
-				<ul class="category">
-					<li><a href="#">#design</a></li>
-				</ul>
-			</article><!-- end popular_posts -->
-			
-			<article class="popular_post">
-				<h2><a href="#">Vestibulum id ligula porta felis euismod semper</a></h2>
-				<ul class="category">
-					<li><a href="#">#design</a></li>
-				</ul>
-			</article><!-- end popular_posts -->
-		</div>
-	</section><!-- end popular_posts -->
+	<?php endif; ?>
 
-	<section>
+	<?php //get_template_part('content', 'popular'); ?>
+
+	<section class="main_home_content">
 	
 		<div class="container">
 			<div class="post_content">
+				<?php query_posts(array('post__not_in' => $displayed)) ?>
 				<?php if ( have_posts() ) : ?>
 		
 					<?php while ( have_posts() ) : the_post(); ?>

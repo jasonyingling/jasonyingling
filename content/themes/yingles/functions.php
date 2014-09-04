@@ -170,3 +170,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Shortcodes
  */
 require get_template_directory() . '/inc/shortcodes.php';
+
+//Wrap embed/iframe code in video-container wrapper
+function wrap_embed_with_div($html, $url, $attr) {
+
+     return '<div class="video_wrapper"><div class="video-container">' . $html . '</div></div>';
+
+}
+add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
