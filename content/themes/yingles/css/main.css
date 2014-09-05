@@ -1643,6 +1643,9 @@ h2 {
   content: '"'; }
 .post_quote header a:hover {
   color: whitesmoke; }
+.post_quote .byline a {
+  display: block;
+  line-height: 1.25; }
 
 .category_one .copy {
   border-left: 3px solid #e04848; }
@@ -1815,6 +1818,9 @@ h2 {
   position: absolute;
   width: 100%;
   opacity: .5; }
+  .featured_image img {
+    width: 100%;
+    height: auto; }
 
 .featured_arrow_side {
   width: 50%;
@@ -2211,3 +2217,11 @@ h2 {
   z-index: 1;
   text-align: center;
   margin: 0px 0 30px; }
+
+.navigation-paging {
+  font-size: 16px;
+  margin-bottom: 40px; }
+  .navigation-paging:after {
+    content: "";
+    display: table;
+    clear: both; }

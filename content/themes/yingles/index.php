@@ -38,22 +38,26 @@ get_header(); ?>
 	
 		<div class="container">
 			<div class="post_content">
-				<?php query_posts(array('post__not_in' => $displayed)) ?>
+				<?php
+					$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+					$args = array(
+						'post__not_in' => $displayed,
+						'posts_per_page' => 10,
+						'paged' => $paged,
+					);
+					query_posts($args); 
+				?>
 				<?php if ( have_posts() ) : ?>
 		
 					<?php while ( have_posts() ) : the_post(); ?>
 		
-						<?php
-							/* Include the Post-Format-specific template for the content.
-							 * If you want to overload this in a child theme then include a file
-							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-							 */
-							get_template_part( 'content', get_post_format() );
-						?>
+						<?php $format = get_post_format(); ?>
+						<?php get_template_part('post-formats/content', $format); ?>
 		
 					<?php endwhile; ?>
 		
-					<?php //boiler_content_nav( 'nav-below' ); ?>
+					<?php boiler_content_nav( 'nav-below' ); ?>
+					<?php //r8_pagination(); ?>
 		
 				<?php else : ?>
 		

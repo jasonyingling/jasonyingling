@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header container">
+			<header class="page-header">
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
@@ -83,11 +83,6 @@ get_header(); ?>
 					endif;
 				?>
 			</header>
-			
-			<section class="main_home_content">
-	
-				<div class="container">
-					<div class="post_content">
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -109,12 +104,6 @@ get_header(); ?>
 			<?php get_template_part( 'no-results', 'archive' ); ?>
 
 		<?php endif; ?>
-				</div><!-- end post_content -->
-				
-				<?php get_sidebar(); ?>
-			
-			</div>
-		</section>
 
 		</div>
 	</section>

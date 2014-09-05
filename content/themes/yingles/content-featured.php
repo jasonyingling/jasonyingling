@@ -9,7 +9,7 @@
 	<section class="featured_post_area">
 		
 		<div class="featured_image">
-			<img src="<?php bloginfo('template_url'); ?>/images/waino-header.jpg" alt=""/>
+			<?php the_post_thumbnail('full'); ?>
 		</div><!-- featured_image -->
 		
 		<div class="container">
@@ -31,7 +31,6 @@
 			
 			<div class="post_date post_meta_overlays">
 				<p><?php the_time('F j, Y'); ?></p>
-				<p><?php the_time('g:i A'); ?></p>
 			</div>
 			
 			<div class="taxonomies post_meta_overlays">
