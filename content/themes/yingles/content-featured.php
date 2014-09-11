@@ -6,6 +6,13 @@
 	<?php
 		$author = get_the_author();
 	?>
+	<?php
+		$content = get_the_content();
+		$strippedContent = strip_shortcodes($content);
+		$wordCount = str_word_count($strippedContent);
+		$readingTime = round($wordCount / 300);
+	?>
+
 	<section class="featured_post_area">
 		
 		<div class="featured_image">
@@ -26,7 +33,7 @@
 			</article><!-- featured_post -->
 			
 			<div class="reading_time post_meta_overlays">
-				<p><a href="#"><i class="fa fa-clock-o"></i>10 min</a></p>
+				<p><a href="#"><i class="fa fa-clock-o"></i><?php echo $readingTime; ?> min</a></p>
 			</div>
 			
 			<div class="post_date post_meta_overlays">

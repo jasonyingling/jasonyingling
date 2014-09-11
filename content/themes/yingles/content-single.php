@@ -7,7 +7,7 @@
 <article class="single_post_content">
 	
 	<div class="post_copy">
-		<div class="container">
+		<div class="container-post">
 			
 			<div id="google-ads-1" class="google-ads-right">
 			 <script type="text/javascript">

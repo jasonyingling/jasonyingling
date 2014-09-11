@@ -172,7 +172,7 @@
 
 .fixed_wrap {
 	@include clearfix;
-	margin: 20px -30px;
+	margin: 20px 0;
 	overflow: hidden;
 	
 	.background_image {
@@ -253,6 +253,7 @@
 		-ms-filter: blur(5px);
 		filter: blur(5px);
 		background-position: center center;
+		margin: -1px;
 	}
 }
 

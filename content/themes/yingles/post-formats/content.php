@@ -3,7 +3,12 @@
  * @package boiler
  */
 ?>
-
+<?php
+	$content = $post->post_content;
+	$strippedContent = strip_shortcodes($content);
+	$wordCount = str_word_count($strippedContent);
+	$readingTime = ceil($wordCount / 300);
+?>
 	<article class="category_one">
 		<header>
 		
@@ -20,7 +25,7 @@
 					</div>
 				
 				<div class="reading_time post_meta_overlays">
-					<p><a href="#"><i class="fa fa-clock-o"></i>10 min</a></p>
+					<p><a href="#"><i class="fa fa-clock-o"></i><?php echo $readingTime; ?> min</a></p>
 				</div>
 				
 				<div class="post_date post_meta_overlays">

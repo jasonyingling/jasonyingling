@@ -35,6 +35,16 @@
 			padding: 40px 5%;
 		}
 	}
+	
+	.comments {
+		a {
+			&:before {
+				content: '\f0e6';
+				font-family: FontAwesome;
+				margin-right: 5px;
+			}
+		}
+	}
 }
 
 .post_quote {
@@ -76,10 +86,14 @@
 .copy {
 	@include clearfix;
 	@include robotoSlab;
-	font-size: em(18,24);
+	font-size: 18px;
 	color: $black;
 	padding: 10px 20px;
 	border: 1px solid $gray;
+	
+	@include media($tablet) {
+		font-size: 16px;
+	}
 }
 
 .byline {
@@ -104,7 +118,7 @@
 .tags {
 	@include montserrat;
 	font-weight: 400;
-	font-size: em(14,24);
+	font-size: 14px;
 	list-style-type: none;
 	
 	li {
@@ -123,10 +137,14 @@
 
 .post_meta_overlays {
 	position: absolute;
-	font-size: em(18,24);
+	font-size: 18px;
 	color: $white;
 	position: absolute;
 	line-height: 1.25;
+	
+	@include media($tablet) {
+		font-size: 14px;
+	}
 	
 	a {
 		color: $white;

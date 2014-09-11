@@ -11,6 +11,10 @@
 	max-width: 1280px;
 	padding: 0 30px;
 	
+	@include media($mobile) {
+		padding: 0 20px;
+	}
+	
 	.content {
 		@include span-columns(8);
 		padding: 0 2rem;
@@ -24,5 +28,14 @@
 		@include media($mobile) {
 			@include span-columns(4);
 		}
+	}
+}
+
+.container-post {
+	@extend %post;
+	max-width: 100%;
+	
+	@include media($mobile) {
+		padding: 0 20px;
 	}
 }

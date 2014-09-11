@@ -28,6 +28,18 @@
 	
 	.author_bio {
 		display: none;
+		text-align: left;
+	}
+	
+	.social_links {
+		list-style-type: none;
+		text-align: center;
+		
+		li {
+			width: 30px;
+			display: inline-block;
+			margin: 10px 10px 0;
+		}
 	}
 	
 	.expand_bio {

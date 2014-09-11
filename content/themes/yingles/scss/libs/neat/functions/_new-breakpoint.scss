@@ -1,5 +1,4 @@
 @function new-breakpoint($query:$feature $value $columns, $total-columns: $grid-columns) {
-
   @if length($query) == 1 {
     $query: $default-feature nth($query, 1) $total-columns;
   }
@@ -9,7 +8,7 @@
   }
 
   @if not belongs-to($query, $visual-grid-breakpoints) {
-    $visual-grid-breakpoints: append($visual-grid-breakpoints, $query, comma);
+    $visual-grid-breakpoints: append($visual-grid-breakpoints, $query, comma) !global;
   }
 
   @return $query;
