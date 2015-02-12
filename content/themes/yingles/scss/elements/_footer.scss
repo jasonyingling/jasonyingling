@@ -3,6 +3,10 @@
 	background: $red;
 	padding: 20px 0;
 	
+	@include media($mobile) {
+		padding: 20px 20px;
+	}
+	
 	.logo_area {
 		@include span-columns(4);
 		float: left;

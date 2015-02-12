@@ -4,6 +4,10 @@
 	
 	.top_navigation {
 		height: 60px;
+		
+		@include media($mobile) {
+			padding: 0 20px;
+		}
 	}
 	
 	.logo {

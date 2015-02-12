@@ -48,8 +48,8 @@
 	</div>
 	
 	<footer>
-		<div class="container">
-			<?php get_sidebar('single'); ?>
+		<div class="container comment_container">
+			<?php //get_sidebar('single'); ?>
 			
 			<div class="comments">
 			

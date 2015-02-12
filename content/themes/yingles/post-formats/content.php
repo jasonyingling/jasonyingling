@@ -6,7 +6,8 @@
 <?php
 	$content = $post->post_content;
 	$strippedContent = strip_shortcodes($content);
-	$wordCount = str_word_count($strippedContent);
+	$stripTagsContent = strip_tags($strippedContent);
+	$wordCount = str_word_count($stripTagsContent);
 	$readingTime = ceil($wordCount / 300);
 ?>
 	<article class="category_one">
@@ -45,13 +46,15 @@
 		</header>
 	
 		<div class="copy">
-			<?php the_excerpt(); ?>
+			<?php the_content(); ?>
 			<div class="post_meta">
-				<ul class="tags">
+				<!--
+<ul class="tags">
 					<li><a href="#">#design</a></li>
 					<li><a href="#">#dev</a></li>
 					<li><a href="#">#birds</a></li>
-				</ul><!-- end tags -->
+				</ul>
+--><!-- end tags -->
 			</div>
 		</div>
 	

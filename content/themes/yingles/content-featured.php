@@ -7,10 +7,11 @@
 		$author = get_the_author();
 	?>
 	<?php
-		$content = get_the_content();
+		$content = $post->post_content;
 		$strippedContent = strip_shortcodes($content);
-		$wordCount = str_word_count($strippedContent);
-		$readingTime = round($wordCount / 300);
+		$stripTagsContent = strip_tags($strippedContent);
+		$wordCount = str_word_count($stripTagsContent);
+		$readingTime = ceil($wordCount / 300);
 	?>
 
 	<section class="featured_post_area">
@@ -47,7 +48,7 @@
 			</div>
 			
 			<div class="comments post_meta_overlays">
-				<p><a href="<?php comments_link(); ?>"><i class="fa fa-comments-o"></i><?php comments_number('comment', '1 comment', '% comments'); ?></a></p>
+				<p><a href="<?php comments_link(); ?>"><?php comments_number('comment', '1 comment', '% comments'); ?></a></p>
 			</div>
 			
 		</div><!-- end container -->

@@ -1,0 +1,22 @@
+.page_content {
+	@include robotoSlab;
+	font-size: 18px;
+	color: $black;
+	padding: 0;
+	
+	&.page_content_featured {
+		margin: -25px 0 0;
+	}
+	
+	.featured_post {
+		padding: 90px 10% 100px;
+	}
+	
+	header {
+		padding: 0 10%;
+	}
+	
+	#disqus_thread {
+		padding: 0 10%;
+	}
+}

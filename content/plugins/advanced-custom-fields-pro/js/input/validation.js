@@ -1,6 +1,11 @@
 (function($){
     
-	acf.validation = {
+	acf.validation = acf.model.extend({
+		
+		actions: {
+			'ready 20': 'onReady'
+		},
+		
 		
 		// vars
 		active	: 1,
@@ -17,7 +22,7 @@
 		
 		
 		// functions
-		init : function(){
+		onReady : function(){
 			
 			// read validation setting
 			this.active = acf.get('validation');
@@ -42,10 +47,11 @@
 			
 			
 			// add message
-			if( message !== undefined )
-			{
+			if( message !== undefined ) {
+				
 				$field.children('.acf-input').children('.' + this.message_class).remove();
 				$field.children('.acf-input').prepend('<div class="' + this.message_class + '"><p>' + message + '</p></div>');
+			
 			}
 			
 			
@@ -125,27 +131,29 @@
 			var self = this;
 			
 			
-			// remove previous error message
-			$form.children('.' + this.message_class).remove();
-			
-			
 			// hide ajax stuff on submit button
-			if( $('#submitdiv').exists() ) {
+			var $submit = $('#submitpost').exists() ? $('#submitpost') : $('#submitdiv');
+			
+			if( $submit.exists() ) {
 				
 				// remove disabled classes
-				$('#submitdiv').find('.disabled').removeClass('disabled');
-				$('#submitdiv').find('.button-disabled').removeClass('button-disabled');
-				$('#submitdiv').find('.button-primary-disabled').removeClass('button-primary-disabled');
+				$submit.find('.disabled').removeClass('disabled');
+				$submit.find('.button-disabled').removeClass('button-disabled');
+				$submit.find('.button-primary-disabled').removeClass('button-primary-disabled');
 				
 				
 				// remove spinner
-				$('#submitdiv .spinner').hide();
+				$submit.find('.spinner').hide();
 				
 			}
 			
 			
 			// validate json
 			if( !json || typeof json.result === 'undefined' || json.result == 1) {
+				
+				// remove previous error message
+				acf.remove_el( $form.children('.' + this.message_class) );
+				
 			
 				// remove hidden postboxes (this will stop them from being posted to save)
 				$form.find('.acf-postbox.acf-hidden').remove();
@@ -160,13 +168,14 @@
 				
 				
 				// submit form again
-				if( this.$trigger )
-				{
+				if( this.$trigger ) {
+					
 					this.$trigger.click();
-				}
-				else
-				{
+				
+				} else {
+					
 					$form.submit();
+				
 				}
 				
 				
@@ -175,8 +184,12 @@
 			}
 			
 			
-			// show error message	
-			$form.prepend('<div class="' + this.message_class + '"><p>' + json.message + '</p></div>');
+			// reset trigger
+			this.$trigger = null;
+			
+			
+			// vars
+			var $first_field = null;
 			
 			
 			// show field error messages
@@ -205,11 +218,42 @@
 					
 					
 					// add error
-					self.add_error( $field, error.message );
+					this.add_error( $field, error.message );
 					
+					
+					// save as first field
+					if( i == 0 ) {
+						
+						$first_field = $field;
+						
+					}
 					
 				}
 			
+			}
+			
+				
+			// get $message
+			var $message = $form.children('.' + this.message_class);
+			
+			if( !$message.exists() ) {
+				
+				$message = $('<div class="' + this.message_class + '"><p></p></div>');
+				
+				$form.prepend( $message );
+				
+			}
+			
+			
+			// update message text
+			$message.children('p').text( json.message );
+			
+			
+			// if message is not in view, scroll to first error field
+			if( !acf.is_in_view($message) && $first_field ) {
+				
+				$("html, body").animate({ scrollTop: ($first_field.offset().top - 32 - 20) }, 500);
+				
 			}
 			
 		},
@@ -227,56 +271,21 @@
 			});
 			
 			
-			// click save
-			if( $('#save-post').exists() ) {
+			// ignore validation
+			$(document).on('click', '#save-post, #post-preview', function(){
 				
-				$('#save-post').on('click', function(){
+				self.ignore = 1;
+				self.$trigger = $(this);
 				
-					self.ignore = 1;
-					self.$trigger = $(this);
-					
-				});
-				
-			}
+			});
 			
 			
-			
-			// click preview
-			if( $('#post-preview').exists() ) {
+			// save trigger
+			$(document).on('click', 'input[type="submit"]', function(){
 				
-				$('#post-preview').on('click', function(){
+				self.$trigger = $(this);
 				
-					self.ignore = 1;
-					self.$trigger = $(this);
-					
-				});
-				
-			}
-						
-			
-			// click submit
-			if( $('#submit').exists() ) {
-				
-				$('#submit').on('click', function(){
-				
-					self.$trigger = $(this);
-					
-				});
-				
-			}
-			
-			
-			// click publish
-			if( $('#publish').exists() ) {
-				
-				$('#publish').on('click', function(){
-				
-					self.$trigger = $(this);
-					
-				});
-				
-			}
-			
+			});
 			
 			
 			// submit
@@ -322,13 +331,7 @@
 			
 		}
 		
-	};
-	
-	acf.add_action('ready', function(){
-		
-		acf.validation.init();
-		
-	}, 20);
+	});
 	
 
 })(jQuery);

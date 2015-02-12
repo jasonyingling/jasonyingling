@@ -21,8 +21,19 @@ h1 {
 h2 {
 	@include montserrat;
 	font-weight: 400;
-	font-size: 1.25em;
+	font-size: 1.5em;
+}
+
+h3 {
+	@include montserrat;
 	font-weight: 400;
+	font-size: 1.2em;
+}
+
+h4 {
+	@include montserrat;
+	font-weight: 400;
+	font-size: 1em;
 }
 
 // Use mixin

@@ -23,10 +23,10 @@ body {
 a {
 	text-decoration: none;
 	@include transition(color .5s ease-in);
-	color: $charcoal;
+	color: $red;
 
 	&:hover {
-		color: $red;
+		color: darken($red, 20%);
 	}
 }
 

@@ -1,3 +1,11 @@
+.home {
+	.google-ads-sidebar {
+		@include media($tablet) {
+			//display: none;
+		}
+	}
+}
+
 .callout {
 	
 	.callout_links {

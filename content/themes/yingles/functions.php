@@ -252,3 +252,28 @@ function r8_pagination() {
     echo '</ul></div>' . "\n";
 
 }
+
+add_action( 'init', 'featured' );
+
+function featured() {
+	register_taxonomy(
+		'featured',
+		'post',
+		array(
+			'label' => __( 'Featured' ),
+			'rewrite' => array( 'slug' => 'featured-posts' ),
+			'hierarchical' => true,
+			'query_var'  => true,
+		)
+	);
+}
+
+add_image_size( 'home-post', 800, 550, true );
+
+/*
+function dropcap_function($content) {
+	return preg_replace('/<p([^>]+)?>/', '<p$1 class="dropcap">', $content, 1);
+}
+*/
+
+//add_filter('the_content', 'dropcap_function');

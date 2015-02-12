@@ -1,5 +1,7 @@
 jQuery(document).ready(function($){
 	
+	$('.container-post').find('p:first').addClass('dropcap');
+	
 	$('body').flowtype({
 		minimum   : 500,
 		maximum   : 1200,

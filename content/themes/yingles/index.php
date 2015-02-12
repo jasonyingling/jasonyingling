@@ -32,7 +32,7 @@ get_header(); ?>
 	
 	<?php endif; ?>
 
-	<?php //get_template_part('content', 'popular'); ?>
+	<?php get_template_part('content', 'popular'); ?>
 
 	<section class="main_home_content">
 	
@@ -45,11 +45,11 @@ get_header(); ?>
 						'posts_per_page' => 10,
 						'paged' => $paged,
 					);
-					query_posts($args); 
+					$posts = new WP_Query($args); 
 				?>
-				<?php if ( have_posts() ) : ?>
+				<?php if ( $posts->have_posts() ) : ?>
 		
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
 		
 						<?php $format = get_post_format(); ?>
 						<?php get_template_part('post-formats/content', $format); ?>

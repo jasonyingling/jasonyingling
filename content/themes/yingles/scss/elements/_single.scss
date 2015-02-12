@@ -13,6 +13,14 @@
 		height: auto;
 		z-index: 1;
 		
+		@include media($break960) {
+			margin: 0 20px 10px -20px;
+		}
+		
+		@include media($tablet) {
+			margin: 0 20px 10px 0;
+		}
+		
 		@include media($mobile) {
 			margin-left: 0;
 			max-width: 30%;
@@ -26,6 +34,14 @@
 		max-width: 60%;
 		height: auto;
 		z-index: 1;
+		
+		@include media($break960) {
+			margin: 0 -20px 10px 20px;
+		}
+		
+		@include media($tablet) {
+			margin: 0 0 10px 20px;
+		}
 		
 		@include media($mobile) {
 			margin-right: 0;
@@ -42,11 +58,28 @@
 		border-left: 3px solid $red;
 		padding-bottom: 35px;
 		
+		.comment_container {
+			max-width: 850px;
+			padding: 0 20px;
+		}
+		
 		.comments {
-			@include span-columns(8);
+			@include span-columns(12);
 			
 			@include media($tablet) {
 				@include span-columns(8);
+			}
+			
+			.navigation-post {
+				@include media($mobile) {
+					padding: 0 10px;
+				}
+			}
+			
+			#disqus_thread {
+				@include media($mobile) {
+					padding: 0 10px;
+				}
 			}
 		}
 		
@@ -125,38 +158,132 @@
 	border-left: 3px solid $red;
 	padding: 35px 0 20px;
 	
+	img {
+		height: auto;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		padding: 0 20px;
+		max-width: 850px;
+		margin-left: auto;
+		margin-right: auto;
+		
+		@include media($mobile) {
+			padding: 0 10px;
+		}
+	}
+	
+	.gist {
+		padding: 0 20px;
+		max-width: 850px;
+		margin: 20px auto;
+	}
+	
+	iframe {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.twitter-tweet {
+		margin: 15px auto !important;
+	}
+	
 	blockquote {
 		p {
-			margin: 0.625em 10%;
+			margin: 0.625em auto;
+			max-width: 850px;
 			padding: 0 0 0 20px;
 			border-left: 3px solid $red;
 			
 			@include media($mobile) {
-				margin: 0.625em 0;
+				margin: 0.625em 0 0.625em 10px;
 			}
 		}
 	}
 	
 	p {
-		padding: 0 10%;
+		padding: 0 20px;
+		max-width: 850px;
+		margin: 20px auto;
+		line-height: 1.5;
 		
 		@include media($mobile) {
-			padding: 0;
+			padding: 0 10px;
+		}
+	}
+	
+	.sharedaddy {
+		padding: 0 20px;
+		max-width: 850px;
+		margin: 20px auto;
+		line-height: 1.5;
+		
+		@include media($mobile) {
+			padding: 0 10px;
+		}
+	}
+	
+	div {
+		#jp-relatedposts {
+			padding: 0 20px;
+			max-width: 850px;
+			margin: 20px auto;
+			line-height: 1.5;
+			
+			@include media($mobile) {
+				padding: 0 10px;
+			}
+			
+			h4 {
+				padding: 0;
+			}
+			
+			p {
+				padding: 0;
+			}
 		}
 	}
 	
 	ul {
-		padding: 0 10%;
-		margin: 0.625em 0;
+		padding: 0 20px;
+		margin: 0.625em auto;
+		max-width: 850px;
 		list-style-position: inside;
 		
 		@include media($mobile) {
-			padding: 0;
+			padding: 0 0 0 10px;
 		}
 		
 		ul {
 			padding: 0 0 0 20px;
 			margin: 0;
+		}
+		
+	}
+	
+	ol {
+		padding: 0 0 0 20px;
+		margin: 0.625em auto;
+		max-width: 850px;
+		list-style-position: inside;
+		line-height: 1.5;
+		
+		li {
+			margin-bottom: 10px;
+		}
+		
+		@include media($mobile) {
+			padding: 0 0 0 10px;
+		}
+		
+		ol {
+			padding: 0 0 0 20px;
+			margin: 0;
+		}
+		
+		&.easy-footnotes-wrapper {
+			font-size: 14px;
+			margin-bottom: 30px;
 		}
 		
 	}
@@ -182,6 +309,12 @@
 		&.red {
 			background: $red;
 		}
+		
+		&.blue {
+			.fixed_quote {
+				background: $blue;
+			}
+		}
 	}
 	
 	.fixed_image {
@@ -204,6 +337,7 @@
 		@include media($mobile) {
 			@include span-columns(4);
 			@include shift(0);
+			font-size: em(20, 24);
 		}
 		
 		h3 {
@@ -288,6 +422,10 @@
 		background: $black;
 		overflow: hidden;
 		margin-bottom: 20px;
+		
+		&.no_related {
+			background: $white;
+		}
 		
 		@include media($tablet12) {
 			@include span-columns(4);
